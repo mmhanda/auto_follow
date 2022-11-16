@@ -33,29 +33,30 @@
 # send the enter key
 # xdotool key Return
 
-sleep 3
+# sleep 3
 
-xdotool search --class  chrome windowactivate
+# xdotool search --class  chrome windowactivate
 
 # move to the location of the cookie
-x=290
-y=477
-xdotool mousemove x y
-sleep 1
-xdotool key Down Down Down
+# x=290
+# y=477
+# xdotool mousemove x y
 
-
+# sleep 2
 # xdotool mousemove 290 477
 # click the cookie, sleep every 500 clicks in case we want to exit the script
-read -t 1 -n 1 key
-while $key; do
+# read -t 1 -n 1 key
+while true; do
     # xdotool key Return
-     xdotool click --repeat 500 --delay 10 1; sleep 1
-    #xdotool click 1
+    #  xdotool click --repeat 500 --delay 10 1; sleep 1
+    sleep 1
+    xdotool key Down Down Down 
+    # xdotool click 5
+    # xdotool click 1
     #break
-    ((x=x+10))
-    ((y=y+10))
-    xdotool mousemove x y
+    # ((x=x+10))
+    # ((y=y+10))
+    # xdotool mousemove x y
 done
 
 
